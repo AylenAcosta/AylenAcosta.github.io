@@ -1,0 +1,102 @@
+header{
+    background-color: aqua;
+    position: relative;
+    height: 140px;
+}
+
+h1{
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+h1:hover{
+    transform: scale(1.09);
+}
+
+
+nav{
+    text-decoration: none;
+    position: absolute;
+    right: 20px; /*derecha*/
+    top: 39px; /*ariva*/
+    color: black;
+}
+nav:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+nav li{
+    display: inline;
+}
+
+.contenedor_limite{
+    background-color: rgb(225, 253, 253);
+    max-width: 800px;
+    margin: 0 auto;
+}
+.contenedor_padre{
+    display: flex; /*para alinear las cards una al lado de la otra*/
+    justify-content: space-evenly; /*para crear escacio entre las mismas*/
+    flex: wrap; /*para que se ajusten solas las cards a distintos tamaños de pagina*/
+}
+.card{
+    background-color: antiquewhite;/*poner color a la caja*/
+    width: 300px;/*tamaño de ler: 5px solido;
+    padding: 10px 20px 25px 5px;/**/
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+img{
+    max-width: 100%;/*tamaño de la imagen dentro de la caja*/
+
+}
+footer{
+    background-color: aqua;
+    position:absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 600px) {
+
+    h1{
+        font-size: 35px;
+    }
+
+    nav{
+        position: absolute;
+        right: 0px;
+    }
+}
+
+/*grillas*/
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+ }
+    
+ .div1 { 
+    grid-area: 1 / 1 / 2 / 3;
+ }
+ .div1 img{ 
+    width: 100%;
+ }
+ .div2 { 
+    grid-area: 2 / 1 / 3 / 2; 
+}
+.div2 img{ 
+    width: 100%;
+ }
+ .div3 { 
+    grid-area: 2 / 2 / 3 / 3; 
+}
+.div3 img{ 
+    width: 100%;
+ }
